@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+ url      = env("DATABASE_URL")
 }
 
 model Cliente {
@@ -13,4 +13,6 @@ model Cliente {
   telefone String
   email    String @unique
   endereco String
+  idade Int?   // Nova coluna adicionada (opcional, pois tem "?")
+  createdAt DateTime @default(now())
 }
