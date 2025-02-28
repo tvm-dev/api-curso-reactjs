@@ -4,7 +4,9 @@ CREATE TABLE "Cliente" (
     "nome" TEXT NOT NULL,
     "telefone" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "endereco" TEXT NOT NULL
+    "endereco" TEXT NOT NULL,
+    "idade" INTEGER,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 -- CreateIndex
